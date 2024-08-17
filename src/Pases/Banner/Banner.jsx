@@ -7,19 +7,19 @@ import banner07 from '../../assets/images/banner/banner07.jpg';
 
 const Banner = () => {
     return (
-        <div className="container mx-auto carousel-container">
+        <div className="container top-0 left-0 mx-auto carousel-container">
             <Carousel showThumbs={false} autoPlay infiniteLoop>
-                <div>
-                    <img className='h-[400px] w-full object-cover' src={banner06} alt="Banner 06" />
+                <div className='w-full'>
+                    <img className='lg:h-[400px]  md:h-[300px]  w-full h-[200px] object-cover' src={banner06} alt="Banner 06" />
                 </div>
-                <div>
-                    <img className='h-[400px] w-full object-cover' src={banner05} alt="Banner 07" />
+               <div className='w-full'>
+                    <img className='lg:h-[400px]   md:h-[300px]  h-[200px] w-full object-cover' src={banner05} alt="Banner 07" />
                 </div>
-                <div>
-                    <img className='h-[400px] w-full object-cover' src={banner04} alt="Banner 05" />
+               <div className='w-full'>
+                    <img className='lg:h-[400px]   md:h-[300px]  h-[200px] w-full object-cover' src={banner04} alt="Banner 05" />
                 </div>
-                <div>
-                    <img className='h-[400px] w-full object-cover' src={banner07} alt="Banner 05" />
+               <div className='w-full'>
+                    <img className='lg:h-[400px]   md:h-[300px] p-5 h-[200px] w-full object-cover' src={banner07} alt="Banner 05" />
                 </div>
             </Carousel>
         </div>

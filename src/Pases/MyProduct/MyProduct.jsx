@@ -3,11 +3,11 @@ import './MyProduct.css';
 
 const MyProduct = () => {
     return (
-        <div className="container min-h-screen mx-auto my-20 text-white bg-fixed bg-item opacity-55">
+        <div className="container min-h-screen mx-auto my-20 text-white bg-fixed opacity-70 bg-item">
             <h1 className="pt-20 pl-10 mb-10 text-4xl font-bold text-center lg:text-left">My Product</h1>
             <div className="flex flex-col items-center justify-between p-10 space-y-10 lg:flex-row lg:space-y-0 lg:space-x-10">
                 <div className="flex-1">
-                    <img className="object-cover transition-shadow duration-300 ease-in-out transform rounded-lg shadow-lg hover:shadow-2xl hover:scale-105" src={food2} alt="Product Image" />
+                    <img className="object-cover transition-shadow duration-300 ease-in-out transform rounded-lg shadow-lg hover:shadow-2xl hover:scale-110" src={food2} alt="Product Image" />
                 </div>
                 <div className="flex-1 text-justify">
                     <p className="mb-5">Our products blend quality, innovation, and style across categories like electronics, home essentials, and fashion. Each item is carefully selected to offer top performance and value. From cutting-edge gadgets to trendy apparel, we ensure that every product meets high standards, enhancing your everyday experience with reliability and flair.</p>

@@ -1,0 +1,24 @@
+[
+    {
+        "image":"https://i.postimg.cc/0yZk7TVV/test01.jpg",
+        "name": "John Doe",
+        "role": "CEO, TechCorp",
+        "description": "This product exceeded our expectations! The quality and functionality are outstanding. We highly recommend it.",
+        "rating": 5
+        
+    },
+    {
+        "image":"https://i.postimg.cc/zfBJ7xM8/test2.jpg",
+        "name": "Jane Smith",
+        "role": "Marketing Manager, Creative Solutions",
+        "description": "The best investment we've made! It has improved our workflow and efficiency significantly.",
+        "rating": 5
+    },
+    {
+        "image":"https://i.postimg.cc/s2N3NpdS/test3.webp",
+        "name": "Samuel Green",
+        "role": "Founder, GreenTech",
+        "description": "A game-changer for our business. The customer service was also top-notch!",
+        "rating": 5
+    }
+]
