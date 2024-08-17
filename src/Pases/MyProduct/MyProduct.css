@@ -1,0 +1,7 @@
+.bg-item {
+    background-image: linear-gradient(to bottom right, rgba(10, 116, 47, 0.6), rgba(11, 109, 45, 0.2)), url('../../assets/images/banner/food2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
