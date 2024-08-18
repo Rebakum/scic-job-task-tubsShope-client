@@ -23,7 +23,7 @@ const PopularProduct = () => {
                 {products.map(product => (
                     <div key={product._id} className="overflow-hidden bg-white rounded-lg shadow-lg ">
                         <figure className="p-4 bg-gray-100">
-                            <img className="object-cover w-full h-40" src={product.productImage} alt={product.productName} />
+                            <img className="object-cover w-full h-40 rounded-lg" src={product.productImage} alt={product.productName} />
                         </figure>
                         <div className="p-4">
                             <h2 className="mb-2 text-lg font-semibold">{product.productName}</h2>
