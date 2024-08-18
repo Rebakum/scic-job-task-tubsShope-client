@@ -1,0 +1,213 @@
+[
+    {
+      "productName": "Organic Broccoli",
+      "productImage": "https://i.postimg.cc/QtVCgcRT/img1.png",
+      "description": "Fresh organic broccoli, rich in vitamins and minerals.",
+      "price": 2.99,
+      "category": "Vegetable",
+      "ratings": 4.5,
+      "createdAt": "2024-08-16T10:00:00Z",
+      "brandName": "GreenFarm"
+    },
+    {
+      "productName": "Red Apple",
+      "productImage": "https://i.postimg.cc/XX6v0mXf/img2.png",
+      "description": "Crisp and juicy red apples, perfect for a healthy snack.",
+      "price": 1.50,
+      "category": "Fruit",
+      "ratings": 4.7,
+      "createdAt": "2024-08-16T11:00:00Z",
+      "brandName": "FruitFresh"
+    },
+    {
+      "productName": "Whole Wheat Bread",
+      "productImage": "https://i.postimg.cc/ZY2j1SFG/img3.png",
+      "description": "Freshly baked whole wheat bread, rich in fiber.",
+      "price": 3.49,
+      "category": "Food",
+      "ratings": 4.3,
+      "createdAt": "2024-08-16T09:30:00Z",
+      "brandName": "BreadBaker"
+    },
+    {
+      "productName": "Carrot",
+      "productImage": "https://i.postimg.cc/hvdG6c44/img4.jpg",
+      "description": "Sweet and crunchy carrots, packed with beta-carotene.",
+      "price": 0.99,
+      "category": "Vegetable",
+      "ratings": 4.6,
+      "createdAt": "2024-08-16T08:45:00Z",
+      "brandName": "VeggieHarvest"
+    },
+    {
+      "productName": "Banana",
+      "productImage": "https://i.postimg.cc/76c6KfkQ/img5.jpg",
+      "description": "Ripe and sweet bananas, a great source of potassium.",
+      "price": 1.20,
+      "category": "Fruit",
+      "ratings": 4.8,
+      "createdAt": "2024-08-16T07:55:00Z",
+      "brandName": "TropicalTaste"
+    },
+    {
+      "productName": "Peanut Butter",
+      "productImage": "https://i.postimg.cc/nVC0Rz7K/img6.png",
+      "description": "Creamy peanut butter made from roasted peanuts.",
+      "price": 5.99,
+      "category": "Food",
+      "ratings": 4.4,
+      "createdAt": "2024-08-16T06:25:00Z",
+      "brandName": "NutriSpread"
+    },
+    {
+      "productName": "Spinach",
+      "productImage": "https://i.postimg.cc/13cHnNhS/img7.png",
+      "description": "Fresh spinach leaves, rich in iron and vitamins.",
+      "price": 2.50,
+      "category": "Vegetable",
+      "ratings": 4.7,
+      "createdAt": "2024-08-16T12:15:00Z",
+      "brandName": "GreenLeaf"
+    },
+    {
+      "productName": "Strawberries",
+      "productImage": "https://i.postimg.cc/MG9mt2pr/img8.png",
+      "description": "Juicy and sweet strawberries, perfect for desserts.",
+      "price": 3.99,
+      "category": "Fruit",
+      "ratings": 4.9,
+      "createdAt": "2024-08-16T13:00:00Z",
+      "brandName": "BerryBliss"
+    },
+    {
+      "productName": "Almond Milk",
+      "productImage": "https://i.postimg.cc/KvTQbH0R/img9.png",
+      "description": "Dairy-free almond milk, perfect for lactose-intolerant individuals.",
+      "price": 4.99,
+      "category": "Food",
+      "ratings": 4.2,
+      "createdAt": "2024-08-16T14:20:00Z",
+      "brandName": "NutriAlmond"
+    },
+    {
+      "productName": "Tomato",
+      "productImage": "https://i.postimg.cc/CKh4jLSq/img10.png",
+      "description": "Ripe and juicy tomatoes, ideal for salads and cooking.",
+      "price": 1.20,
+      "category": "Vegetable",
+      "ratings": 4.5,
+      "createdAt": "2024-08-16T15:00:00Z",
+      "brandName": "FarmFresh"
+    },
+    {
+      "productName": "Blueberries",
+      "productImage": "https://i.postimg.cc/Ssj7vTXQ/img11.png",
+      "description": "Fresh blueberries, rich in antioxidants.",
+      "price": 4.50,
+      "category": "Fruit",
+      "ratings": 4.8,
+      "createdAt": "2024-08-16T16:10:00Z",
+      "brandName": "BerryBurst"
+    },
+    {
+      "productName": "Greek Yogurt",
+      "productImage": "https://i.postimg.cc/0Q3dRYmY/img12.png",
+      "description": "Creamy Greek yogurt, high in protein and probiotics.",
+      "price": 3.99,
+      "category": "Food",
+      "ratings": 4.6,
+      "createdAt": "2024-08-16T17:25:00Z",
+      "brandName": "DairyDelight"
+    },
+    {
+      "productName": "Potato",
+      "productImage": "https://i.postimg.cc/rsrG8DCv/img13.png",
+      "description": "Versatile potatoes, perfect for mashing, roasting, or frying.",
+      "price": 0.99,
+      "category": "Vegetable",
+      "ratings": 4.4,
+      "createdAt": "2024-08-16T18:00:00Z",
+      "brandName": "RootHarvest"
+    },
+    {
+      "productName": "Orange",
+      "productImage": "https://i.postimg.cc/59YS5rdn/img14.png",
+      "description": "Sweet and tangy oranges, rich in vitamin C.",
+      "price": 1.50,
+      "category": "Fruit",
+      "ratings": 4.7,
+      "createdAt": "2024-08-16T19:00:00Z",
+      "brandName": "CitrusFresh"
+    },
+    {
+      "productName": "Pasta",
+      "productImage": "https://i.postimg.cc/tRKtBz9y/img15.png",
+      "description": "Durum wheat pasta, perfect for a variety of Italian dishes.",
+      "price": 2.99,
+      "category": "Food",
+      "ratings": 4.5,
+      "createdAt": "2024-08-16T20:30:00Z",
+      "brandName": "PastaPerfect"
+    },
+    {
+      "productName": "Lettuce",
+      "productImage": "https://i.postimg.cc/RVw1yn0t/img16.png",
+      "description": "Crisp lettuce leaves, perfect for salads and sandwiches.",
+      "price": 1.75,
+      "category": "Vegetable",
+      "ratings": 4.6,
+      "createdAt": "2024-08-16T21:10:00Z",
+      "brandName": "LeafyGreens"
+    },
+    {
+      "productName": "Pineapple",
+      "productImage": "https://i.postimg.cc/7ZD1kYCW/img17.png",
+      "description": "Tropical pineapple, sweet and tangy, perfect for snacking.",
+      "price": 3.49,
+      "category": "Fruit",
+      "ratings": 4.9,
+      "createdAt": "2024-08-16T22:05:00Z",
+      "brandName": "TropicalTreat"
+    },
+    {
+      "productName": "Oatmeal",
+      "productImage": "https://i.postimg.cc/3xBXJ5mJ/img18.png",
+      "description": "Heart-healthy oatmeal, a great source of fiber.",
+      "price": 3.99,
+      "category": "Food",
+      "ratings": 4.7,
+      "createdAt": "2024-08-16T23:15:00Z",
+      "brandName": "FiberFirst"
+    },
+    {
+      "productName": "Zucchini",
+      "productImage": "https://i.postimg.cc/DzwqSjPQ/img19.png",
+      "description": "Fresh zucchini, versatile for grilling, roasting, or baking.",
+      "price": 1.30,
+      "category": "Vegetable",
+      "ratings": 4.5,
+      "createdAt": "2024-08-16T05:40:00Z",
+      "brandName": "GreenVeggies"
+    },
+    {
+      "productName": "Peach",
+      "productImage": "https://i.postimg.cc/wBG1T7fS/img20.png",
+      "description": "Sweet and juicy peaches, perfect for desserts and snacks.",
+      "price": 2.50,
+      "category": "Fruit",
+      "ratings": 4.8,
+      "createdAt": "2024-08-16T06:30:00Z",
+      "brandName": "FruitfulHarvest"
+    },
+    {
+      "productName": "Granola",
+      "productImage": "https://i.postimg.cc/XYwK84WR/img21.png",
+      "description": "Crunchy granola, great for breakfast or as a snack.",
+      "price": 4.49,
+      "category": "Food",
+      "ratings": 4.6,
+      "createdAt": "2024-08-16T07:20:00Z",
+      "brandName": "GranolaGoodness"
+    }
+  ]
+  
