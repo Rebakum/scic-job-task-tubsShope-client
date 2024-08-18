@@ -2,14 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import UseAxiosSecure from '../Hook/UseAxiosSecure';
+import Pagination from "./Pagination";
 
 const PopularProduct = () => {
     const axiosSecure = UseAxiosSecure();
 
-    const [brand, setBrand] = useState('');  // State for selected brand
-    const [category, setCategory] = useState('');  // State for selected category
-    const [priceRange, setPriceRange] = useState(500);  // State for selected price range
-    const [sortOption, setSortOption] = useState('dateDesc'); // State for sorting
+    const [brand, setBrand] = useState(''); 
+    const [category, setCategory] = useState('');  
+    const [priceRange, setPriceRange] = useState(5);  
+    const [sortOption, setSortOption] = useState('dateDesc');
 
     const { data: products = [], isLoading } = useQuery({
         queryKey: ['products', brand, category, priceRange, sortOption],
@@ -33,6 +34,7 @@ const PopularProduct = () => {
     if (isLoading) {
         return <div>Loading...</div>;
     }
+    
 
     return (
         <div className="container mx-auto my-10">
@@ -65,8 +67,8 @@ const PopularProduct = () => {
                         type="range"
                         id="price-range"
                         min="0"
-                        max="1000"
-                        step="10"
+                        max="5"
+                        step="0.5"
                         value={priceRange}
                         onChange={(e) => setPriceRange(Number(e.target.value))}
                         className="w-full"
@@ -74,7 +76,7 @@ const PopularProduct = () => {
                     <div className="flex justify-between mt-1 text-sm">
                         <span>$0</span>
                         <span>${priceRange}</span>
-                        <span>$1000</span>
+                        <span>$5</span>
                     </div>
                 </div>
 
@@ -88,6 +90,14 @@ const PopularProduct = () => {
                         <li><a onClick={() => setSortOption('dateAsc')}>Date Added: Oldest First</a></li>
                     </ul>
                 </div>
+                <div className="flex flex-col items-center space-y-4">
+                        <div className="flex space-x-2">
+                            <input type="text" placeholder="Search..." className="px-4 py-2 border rounded-md" />
+                            <button className="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-500">Search</button>
+                        </div>
+                        
+                    </div>
+
             </div>
 
             {/* Products Display */}
@@ -118,7 +128,9 @@ const PopularProduct = () => {
                         <div className="absolute px-2 py-1 text-xs font-bold text-white bg-red-500 top-2 left-2">Sale 50%</div>
                     </div>
                 ))}
+            
             </div>
+            <Pagination/>
         </div>
     );
 };

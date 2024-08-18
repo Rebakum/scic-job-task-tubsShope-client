@@ -1,30 +1,49 @@
+import { useQuery } from '@tanstack/react-query';
 import { useContext, useState } from 'react';
 import { FaBars, FaMapMarkerAlt, FaPhoneAlt, FaShoppingCart, FaTimes, FaUser } from 'react-icons/fa';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../../../public/logo.jpg';
 import { AuthContext } from '../../../Router/Provider/AuthProvider';
+import UseAxiosSecure from '../../Hook/UseAxiosSecure';
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { currentUser, logOut } = useContext(AuthContext);
     const [isOpen, setIsOpen] = useState(false);
+    const [searchValue, setSearchValue] = useState('');
     const navigate = useNavigate();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    const axiosSecure = UseAxiosSecure();
+
+    const { data: products = [], } = useQuery({
+        queryKey: ['products', searchValue],
+        queryFn: async () => {
+            const { data } = await axiosSecure.get(`/products?search=${searchValue}`);
+            return data;
+        },
+        enabled: !!searchValue,
+    });
+
     const handleLogout = async () => {
         try {
-            await logOut(); 
+            await logOut();
             navigate('/'); // Redirect to home after logging out
         } catch (error) {
             console.error('Logout failed:', error);
         }
     };
 
+    const handleSearch = () => {
+        // Triggering the search query manually by updating the state
+        setSearchValue(searchValue);
+    };
+
     return (
-        <header className="fixed top-0 left-0 z-50 w-full bg-gray-100 shadow-md">
-            <div className="container flex items-center justify-between mx-auto lg:px-8">
+        <header className="container fixed top-0 left-0 z-50 w-full mx-auto bg-gray-200 shadow-md">
+            <div className="container flex items-center justify-between lg:px-5">
                 {/* Logo */}
                 <div className="flex items-center text-2xl font-bold text-green-500">
                     <img className="w-10 h-10 mr-2" src={logo} alt="Logo" />
@@ -46,7 +65,7 @@ const Header = () => {
                 {/* User Actions */}
                 <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
-                        {user ? (
+                        {currentUser ?
                             <>
                                 <FaUser className="text-green-600" />
                                 <button
@@ -56,13 +75,13 @@ const Header = () => {
                                     Logout
                                 </button>
                             </>
-                        ) : (
+                            :
                             <>
                                 <Link to='/signIn' className="text-sm text-gray-700 hover:text-green-600">Sign In</Link>
                                 <span className="text-sm text-gray-700">/</span>
                                 <Link to='/signUp' className="text-sm text-gray-700 hover:text-green-600">Sign Up</Link>
                             </>
-                        )}
+                        }
                     </div>
                     {/* Mobile Menu Button */}
                     <button className="md:hidden" onClick={toggleMenu}>
@@ -73,7 +92,7 @@ const Header = () => {
 
             {/* Navbar */}
             <div className="bg-gray-100 shadow-lg">
-                <div className="container flex items-center justify-between px-2 py-2 mx-auto lg:px-0">
+                <div className="flex items-center justify-between px-2 py-2 mx-auto lg:px-5">
                     {/* Desktop Menu */}
                     <nav className="hidden space-x-8 md:flex">
                         <NavLink to="/" className="text-gray-700 hover:text-green-600">Home</NavLink>
@@ -85,8 +104,19 @@ const Header = () => {
 
                     {/* Search and Cart */}
                     <div className="items-center hidden space-x-4 md:flex">
-                        <input type="text" placeholder="Search..." className="px-4 py-2 border rounded-md" />
-                        <button className="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-500">Search</button>
+                        <input
+                            type="text"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                            placeholder="Search..."
+                            className="px-4 py-2 border rounded-md"
+                        />
+                        <button
+                            onClick={handleSearch}
+                            className="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-500"
+                        >
+                            Search
+                        </button>
                         <FaShoppingCart className="text-2xl text-green-600 hover:text-green-500" />
                     </div>
                 </div>
@@ -104,8 +134,19 @@ const Header = () => {
                     {/* Mobile Search and Cart */}
                     <div className="flex flex-col items-center space-y-4">
                         <div className="flex space-x-2">
-                            <input type="text" placeholder="Search..." className="px-4 py-2 border rounded-md" />
-                            <button className="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-500">Search</button>
+                            <input
+                                type="text"
+                                value={searchValue}
+                                onChange={(e) => setSearchValue(e.target.value)}
+                                placeholder="Search..."
+                                className="px-4 py-2 border rounded-md"
+                            />
+                            <button
+                                onClick={handleSearch}
+                                className="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-500"
+                            >
+                                Search
+                            </button>
                         </div>
                         <FaShoppingCart className="text-2xl text-green-600 hover:text-green-500" />
                     </div>

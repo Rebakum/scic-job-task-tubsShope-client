@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../Router/Provider/AuthProvider';
 
 const SignIn = () => {
-    const { signInUser, googleLogIn } = useContext(AuthContext); 
+    const { signIn, googleLogIn } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSignIn = (event) => {
@@ -16,8 +16,10 @@ const SignIn = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        signInUser(email, password)
+        signIn(email, password)
             .then((result) => {
+                const user = result.user;
+                console.log(user);
                 toast.success('Yeah!! You are welcome');
                 if (result.user) navigate('/');
             })
@@ -45,7 +47,7 @@ const SignIn = () => {
             <Helmet>
                 <title>TUBASHOP | SIGN IN</title>
             </Helmet>
-            <div className="flex items-center justify-center min-h-screen bg-gray-100">
+            <div className="flex items-center justify-center min-h-screen mt-10 bg-gray-100">
                 <div className="w-full max-w-md p-4 bg-white rounded-lg shadow-md lg:p-8">
                     <h2 className="mb-6 text-2xl font-bold text-gray-900">Sign In</h2>
                     <form onSubmit={handleSignIn}>
@@ -54,7 +56,7 @@ const SignIn = () => {
                             <input
                                 type="email"
                                 id="email"
-                                name="email" 
+                                name="email"
                                 placeholder="Enter your email"
                                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
                                 required
@@ -65,7 +67,7 @@ const SignIn = () => {
                             <input
                                 type="password"
                                 id="password"
-                                name="password" 
+                                name="password"
                                 placeholder="Enter your password"
                                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
                                 required
@@ -83,7 +85,7 @@ const SignIn = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer /> 
+            <ToastContainer />
         </>
     );
 };
